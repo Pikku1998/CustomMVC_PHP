@@ -1,10 +1,14 @@
 <?php
-class Pages{
+
+class Pages extends Controller{
     public function __construct(){
         echo 'Pages is Loaded<br>';
     }
-    public function image($id){
-        // echo 'image_method<br>';
-        echo $id;
+
+    public function index(){
+
+    }
+    public function image(){
+        $this->view('image');
     }
 }
