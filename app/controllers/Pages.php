@@ -1,15 +1,18 @@
 <?php
 
 class Pages extends Controller{
+    private $postModel;
     public function __construct(){
         echo 'Default Page is Loaded<br>';
-        $this->model('Page'); // for connecting to database
+        $this->postModel = $this->model('Post');
 
     }
 
     public function index(){
-
-        $data = ['title'=>'Welcome'];
+        $users = $this->postModel->getUsers();
+        $data = [
+            'title'=>'Welcome',
+            'users'=>$users];
         $this->view('pages/index', $data);
     }
 
