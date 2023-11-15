@@ -1,15 +1,15 @@
 <?php
     // Database params
-    define('DB_HOST', 'localhost');
-    define('DB_USER', 'root');
-    define('DB_PASSWORD', 'asdfgh@1');
-    define('DB_NAME', 'php_db');
+    define('DB_HOST', '_YOUR_HOST_');
+    define('DB_USER', '_YOUR_DB_USER_');
+    define('DB_PASSWORD', '_YOUR_DB_PASSWORD_');
+    define('DB_NAME', '_YOUR_DB_NAME_');
 
 
     // root params
     define('APPROOT', dirname(dirname(__FILE__))) ;
 
-    define('URLROOT', 'http://localhost/custom_mvc/');
+    define('URLROOT', '_YOUR_URL_ROOT_');
     
     //Sitename params
     define('SITENAME', 'PrakashMVC');
