@@ -6,4 +6,3 @@
     <title><?php echo SITENAME ?></title>
 </head>
 <body>
-<h6>header</h6>    

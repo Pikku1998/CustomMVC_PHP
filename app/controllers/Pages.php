@@ -1,18 +1,14 @@
 <?php
 
 class Pages extends Controller{
-    private $postModel;
     public function __construct(){
-        echo 'Default Page is Loaded<br>';
-        $this->postModel = $this->model('Post');
 
     }
 
     public function index(){
-        $users = $this->postModel->getUsers();
         $data = [
-            'title'=>'Welcome',
-            'users'=>$users];
+            'title'=>'Prakash MVC'
+        ];
         $this->view('pages/index', $data);
     }
 
