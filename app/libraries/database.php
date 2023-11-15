@@ -13,9 +13,20 @@ class Database{
         //set DSN
         $dsn = 'mysql:host='. $this->host .';dbname='. $this->dbname;
 
+        $options = array(
+            PDO::ATTR_PERSISTENT=>true,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        );
+
         // Create PDO Instance
-        $this->dbh = new PDO($dsn, $this->dbuser, $this->dbpassword);
-        echo 'Database connected<br>';
+        try{
+            $this->dbh = new PDO($dsn, $this->dbuser, $this->dbpassword, $options);
+            echo 'Database connected<br>';
+        }
+        catch(PDOException $e){
+            $this->error = $e->getMessage();
+            echo $this->error;
+        }
 
     }
 }
